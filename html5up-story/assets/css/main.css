@@ -2865,7 +2865,7 @@ ul.actions {
 }
 
 ul.actions li {
-  padding: 0 0 0 1rem;
+  padding: 1rem 0 0 1rem;
   vertical-align: middle;
 }
 
@@ -4940,20 +4940,6 @@ body.is-preload .spotlight.onload-image-fade-in .image img {
   -webkit-align-self: center;
   -ms-align-self: center;
   align-self: center;
-  -moz-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -moz-flex-shrink: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 35%;
-  max-width: 64rem;
-  margin: 0 auto;
-}
-
-.spotlight.style1 .image {
   -moz-flex-grow: 0;
   -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
@@ -4962,17 +4948,31 @@ body.is-preload .spotlight.onload-image-fade-in .image img {
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
-  width: 65%;
+  width: 35%;
+  max-width: 64rem;
+  min-height: 15rem;
+  margin: 0 auto;
+}
+
+.spotlight.style1 .image {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 55%;
   min-width: 25%;
-  min-height: 50rem;
   border-radius: 0;
 }
 
 .spotlight.style1 .image img {
-  -moz-object-fit: cover;
-  -webkit-object-fit: cover;
-  -ms-object-fit: cover;
-  object-fit: cover;
+  -moz-object-fit: contain;
+  -webkit-object-fit: contain;
+  -ms-object-fit: contain;
+  object-fit: contain;
   -moz-object-position: center;
   -webkit-object-position: center;
   -ms-object-position: center;
