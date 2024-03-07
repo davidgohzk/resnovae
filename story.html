@@ -140,11 +140,7 @@
       </section>
 
       <!-- Six -->
-      <form
-        id="submit-form"
-        method="post"
-        action="https://formspree.io/f/xayrjgzz"
-      >
+      <form id="submit-form" method="post">
         <section class="wrapper style1 align-center">
           <div class="inner">
             <h2>If you were Lily? What would you do?</h2>
@@ -241,6 +237,7 @@
     <script src="html5up-story/assets/js/breakpoints.min.js"></script>
     <script src="html5up-story/assets/js/util.js"></script>
     <script src="html5up-story/assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Get the container
@@ -297,6 +294,26 @@
             container.appendChild(conclusionBody);
           }
           document.getElementById("submit-journal").remove();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#submit-form").on("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          var dataString = $(this).serialize();
+
+          $.ajax({
+            type: "POST",
+            url: "https://formspree.io/f/xayrjgzz", // Replace with your FormSubmit endpoint
+            data: dataString,
+            cache: false,
+            success: function (result) {
+              alert(result); // Display a success message
+              console.log(result);
+            },
+          });
         });
       });
     </script>
