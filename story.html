@@ -21,7 +21,7 @@
       >
         <div class="content">
           <h1>The Lost Kitten</h1>
-          <p class="major">
+          <p class="major" id="para1">
             Lily is a happy girl who lives in a little village.
           </p>
         </div>
@@ -36,7 +36,7 @@
         id="first"
       >
         <div class="content">
-          <p>
+          <p id="para2">
             One day, she finds a stray kitten.
             <br /><br />The kitten has no collar and seems to have been lost in
             the woods for a long time.
@@ -55,7 +55,9 @@
         class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>She feeds the kitten some milk and grows to befriend it.</p>
+          <p id="para3">
+            She feeds the kitten some milk and grows to befriend it.
+          </p>
         </div>
         <div class="image">
           <img src="lostkitten/lostkitten3.png" alt="" />
@@ -67,7 +69,7 @@
         class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>
+          <p id="para4">
             Every day, she returns to that spot near her village to play with
             the kitten and take care of it.<br /><br />
             She grows to love the kitten and forms a deep bond with it.
@@ -82,7 +84,7 @@
         class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>
+          <p id="para5">
             One day when Lily is on her way home after school, she sees a little
             girl sitting forlornly at a pond nearby.
           </p>
@@ -95,7 +97,7 @@
         class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>
+          <p id="para6">
             She recognises the girl as Gwen and, approaching her, asks what’s
             wrong.
           </p>
@@ -108,13 +110,13 @@
         class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>
+          <p id="para7">
             Gwen says that she recently lost her kitten, Bubbles, and she misses
             her dearly. She thought that she would have a bit more time to
             search for Bubbles but she will be moving away to the big city the
             very next day. <br /><br />
-            Today would be her last day to find Bubble s and till now she has
-            not seen a single sign of her best friend, Bubbles.
+            Today would be her last day to find Bubbles and till now she has not
+            seen a single sign of her best friend, Bubbles.
           </p>
         </div>
         <div class="image">
@@ -125,7 +127,7 @@
         class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
       >
         <div class="content">
-          <p>
+          <p id="para8">
             Lily immediately recognises that Bubbles is the kitten she had
             found. What should Lily do? <br /><br />
             Should she reveal that she knows Bubbles and risk never seeing
@@ -311,6 +313,51 @@
             cache: false,
           });
         });
+      });
+    </script>
+    <script>
+      // Function to start speech synthesis
+      function startSpeech(text) {
+        const speech = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(speech);
+      }
+
+      // Function to stop speech synthesis
+      function stopSpeech() {
+        speechSynthesis.cancel();
+      }
+
+      // Intersection Observer configuration
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0, // Change this threshold value according to your requirement
+      };
+
+      // Callback function to handle intersection changes
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start speech when the div enters the viewport
+            startSpeech(entry.target.innerText);
+          } else {
+            // Stop speech when the div leaves the viewport
+            stopSpeech();
+          }
+        });
+      }
+
+      // Create Intersection Observer instance
+      const observer = new IntersectionObserver(handleIntersection, options);
+
+      // Target the div
+      const targetDivs = document.querySelectorAll(
+        "#para1, #para2, #para3, #para4, #para5, #para6, #para7, #para8"
+      );
+
+      // Start observing the div
+      targetDivs.forEach((div) => {
+        observer.observe(div);
       });
     </script>
   </body>
