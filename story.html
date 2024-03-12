@@ -204,6 +204,7 @@
                   rows="6"
                   placeholder="Share your thoughts here!"
                 ></textarea>
+                <button id="speechButton">Speech to text</button>
               </div>
             </div>
             <ul class="actions special">
@@ -358,6 +359,52 @@
       // Start observing the div
       targetDivs.forEach((div) => {
         observer.observe(div);
+      });
+    </script>
+    <script>
+      const speechButton = document.getElementById("speechButton");
+      const speechInput = document.getElementById("message");
+      let recognition = null;
+      let isListening = false;
+
+      function startSpeechRecognition() {
+        if (!("webkitSpeechRecognition" in window)) {
+          speechInput.value =
+            "Your browser does not support speech recognition.";
+          return;
+        }
+
+        recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = false;
+        recognition.lang = "en-US";
+
+        recognition.onstart = function () {
+          speechInput.value = "Listening...";
+          isListening = true;
+        };
+
+        recognition.onresult = function (event) {
+          speechInput.value = event.results[0][0].transcript;
+        };
+
+        recognition.onerror = function (event) {
+          speechInput.value = "Error occurred in recognition: " + event.error;
+        };
+
+        recognition.start();
+      }
+
+      speechButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (isListening) {
+          recognition.stop();
+          speechButton.textContent = "Start Speech Recognition";
+          isListening = false;
+        } else {
+          startSpeechRecognition();
+          speechButton.textContent = "Stop Speech Recognition";
+        }
       });
     </script>
   </body>
