@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Digital Diaries</title>
+    <title>Critical Crossroads</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -41,8 +41,8 @@
             <br /><br />The kitten has no collar and seems to have been lost in
             the woods for a long time.
 
-            <br /><br />The kitten is very apprehensive towards her but Lily
-            immediately takes a liking to it.
+            <br /><br />The kitten is very scared of her, but Lily immediately
+            takes a liking to it.
           </p>
         </div>
         <div class="image">
@@ -132,7 +132,7 @@
             found. What should Lily do? <br /><br />
             Should she reveal that she knows Bubbles and risk never seeing
             Bubbles ever again even though Bubbles will be reunited with her
-            owner. <br /><br />Or should she pretend to be ignorant and keep
+            owner? <br /><br />Or should she pretend to be ignorant and keep
             bubbles a secret?
           </p>
         </div>
@@ -145,14 +145,13 @@
       <form id="submit-form" method="post">
         <section class="wrapper style1 align-center">
           <div class="inner">
-            <h2>If you were Lily? What would you do?</h2>
+            <h2>If you were Lily, what would you do?</h2>
             <div class="items style1 medium onscroll-fade-in">
               <section>
-                <h3>Choice 1</h3>
                 <p>
-                  Should Lily reveal that she knows Bubbles and risk never
-                  seeing Bubbles again even though Bubbles will be reunited with
-                  her owner.
+                  I will reveals that I knows Bubbles and risk never seeing
+                  Bubbles again even though Bubbles will not be reunited with me
+                  again.
                 </p>
 
                 <input
@@ -162,31 +161,27 @@
                   value="choice-1"
                   checked
                 />
-                <label for="choice-1">Select Choice 1</label>
+                <label for="choice-1">Select Choice</label>
               </section>
               <section>
-                <h3>Choice 2</h3>
-                <p>
-                  Should Lily pretend to be ignorant and keep Bubbles a secret?
-                </p>
+                <p>I pretend to be ignorant and keep Bubbles a secret.</p>
                 <input
                   type="radio"
                   id="choice-2"
                   name="choice-button"
                   value="choice-2"
                 />
-                <label for="choice-2">Select Choice 2</label>
+                <label for="choice-2">Select Choice</label>
               </section>
               <section>
-                <h3>Choice 3</h3>
-                <p>I want to make my own choice</p>
+                <p>I will make my own ending.</p>
                 <input
                   type="radio"
                   id="choice-3"
                   name="choice-button"
                   value="choice-3"
                 />
-                <label for="choice-3">Select Choice 3</label>
+                <label for="choice-3">Select Choice</label>
               </section>
             </div>
           </div>
@@ -195,7 +190,7 @@
         <!-- Seven -->
         <section class="wrapper style1 align-center">
           <div class="inner medium">
-            <h2>Can you explain why did you make this choice?</h2>
+            <h2>Why did you make this choice?</h2>
             <div class="fields">
               <div class="field">
                 <textarea
@@ -282,12 +277,24 @@
             var conclusionBody = document.createElement("p");
             if (choice === "choice-1") {
               conclusionHeader.textContent = "Reveal Bubbles";
-              conclusionBody.textContent =
-                "Lily asks Gwen to wait there and leaves to find Bubbles. She brings Bubbles to Gwen whose eyes well up with tears of joy. Seeing her owner, Bubbles’ usually reserved demeanor shatters and she jumps into Gwen’s arms. Seeing the two companions reunited, Lily feels a small smile come to her face and senses that things will be alright. Bubbles may be leaving the village along with Gwen. But nothing is truly lost. The memories she and Bubbles shared will always remain close to her heart. All precious memories will converge and flow down the river of life towards eternity.";
+              conclusionBody.innerHTML =
+                "Lily asks Gwen to wait there and leaves to find Bubbles.<br>She brings Bubbles to Gwen whose eyes well up with tears of joy.<br>Seeing her owner, Bubbles’ usually reserved demeanor shatters and she jumps into Gwen’s arms.<br>Seeing the two companions reunited, Lily feels a small smile come to her face and senses that things will be alright.<br>Bubbles may be leaving the village along with Gwen, but nothing is truly lost.<br>The memories she and Bubbles shared will always remain close to her heart.<br>All precious memories will converge and flow down the river of life towards eternity.";
             } else if (choice == "choice-2") {
               conclusionHeader.textContent = "Keep Bubbles a secret";
-              conclusionBody.textContent =
-                "Lily looks away slightly and says softly that she has not seen Bubbles but would be sure to keep a lookout for her. Gwen looks at her with puffy eyes and gives a small smile - thanking Lily for listening to her. Lily spends some more time giving Gwen company before they return home. The next day Gwen and her family leave the village... Lily finds Bubbles again and decides to adopt her. As they both rest on the grass watching the sunset in the distance, Lily feels a tug on her heart as she thinks about Gwen looking forlorn yesterday. She did not know Gwen so well but she still felt sad at having hidden the truth about Bubbles from her. Would she ever be able to meet Gwen again and beg for her forgiveness for the self-serving choice she made? Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.";
+              conclusionBody.innerHTML =
+                "Lily looks away slightly and says softly that she has not seen Bubbles but would be sure to keep a lookout for her.<br>Gwen looks at her with puffy eyes and gives a small smile - thanking Lily for listening to her.<br>Lily spends some more time giving Gwen company before they return home.<br>The next day Gwen and her family leave the village...<br>Lily finds Bubbles again and decides to adopt her.<br>As they both rest on the grass watching the sunset in the distance, Lily feels a tug on her heart as she thinks about Gwen looking forlorn yesterday.<br>She did not know Gwen so well but she still felt sad at having hidden the truth about Bubbles from her.<br>Would she ever be able to meet Gwen again and beg for her forgiveness for the self-serving choice she made?<br>Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.";
+            }
+
+            var postStoryQuestionsUL = document.createElement("ul");
+            var questions = [
+              "Would keeping Bubbles a secret be a form of lying?",
+              "Would you lie for something good? Why or why not?",
+              "How would you feel if you found out you were lied to?",
+            ];
+            for (var i = 0; i < questions.length; i++) {
+              var li = document.createElement("li");
+              li.textContent = questions[i];
+              postStoryQuestionsUL.appendChild(li);
             }
 
             // Append the elements to container
@@ -295,6 +302,7 @@
             container.appendChild(imgDiv);
             container.appendChild(conclusionHeader);
             container.appendChild(conclusionBody);
+            container.appendChild(postStoryQuestionsUL);
           }
           document.getElementById("submit-journal").remove();
         });
