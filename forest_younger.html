@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Critical Crossroads</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="html5up-story/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="html5up-story/assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
+      <!-- One -->
+      <section
+        class="banner style1 orient-left content-align-left image-position-right fullscreen"
+      >
+        <div class="content">
+          <h1>The Enchanted Treasure of Sunnyvale Forest</h1>
+          <p class="major" id="para1">
+            In a lovely town, Daisy is sad by the passing of her beloved dog,
+            Elise.
+          </p>
+        </div>
+        <div class="image">
+          <img src="forest/forest1.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Two -->
+      <section
+        class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+        id="first"
+      >
+        <div class="content">
+          <p id="para2">
+            When Daisy went to explore a hidden path, she discovers the
+            enchanted Sunnyvale Forest, where she meets and journeys together
+            with animal friends!
+          </p>
+        </div>
+        <div class="image">
+          <img src="forest/forest8.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Three -->
+      <section
+        class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para3">
+            Daisy grows closer to her animal friends over the many days she
+            spends with them!
+          </p>
+        </div>
+        <div class="image">
+          <img src="forest/forest5.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Four -->
+      <section
+        class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para4">
+            One day, she discovers that there lies a magical crystal at the
+            heart of the forest that will grant its owner any one wish that they
+            desire.
+            <br />
+            <br />
+            Determined to bring Elise back, Daisy embarks on a quest for the
+            magical crystal but faces a moral choice.
+            <br />
+            <br />
+            If Daisy were to wish on the crystal, diseases would affect the
+            entire forest and rob her new friends of their home.
+          </p>
+        </div>
+        <div class="image">
+          <img src="forest/forest6.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Six -->
+      <form id="submit-form" method="post">
+        <section class="wrapper style1 align-center">
+          <div class="inner">
+            <h2>If you were Daisy, what would you do?</h2>
+            <div class="items style1 medium onscroll-fade-in">
+              <section>
+                <p>I will leave the Crystal Alone</p>
+
+                <input
+                  type="radio"
+                  id="choice-1"
+                  name="choice-button"
+                  value="choice-1"
+                  checked
+                />
+                <label for="choice-1">Select Choice</label>
+              </section>
+              <section>
+                <p>I wish on the Crystal.</p>
+                <input
+                  type="radio"
+                  id="choice-2"
+                  name="choice-button"
+                  value="choice-2"
+                />
+                <label for="choice-2">Select Choice</label>
+              </section>
+              <section>
+                <p>I will make my own ending.</p>
+                <input
+                  type="radio"
+                  id="choice-3"
+                  name="choice-button"
+                  value="choice-3"
+                />
+                <label for="choice-3">Select Choice</label>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seven -->
+        <section class="wrapper style1 align-center">
+          <div class="inner medium">
+            <h2>Why did you make this choice?</h2>
+            <div class="fields">
+              <div class="field">
+                <textarea
+                  name="choice_input"
+                  id="message"
+                  rows="6"
+                  placeholder="Share your thoughts here!"
+                ></textarea>
+                <button id="speechButton">Speech to text</button>
+              </div>
+            </div>
+            <ul class="actions special">
+              <li>
+                <input
+                  type="submit"
+                  name="choice_submission"
+                  id="submit-journal"
+                  value="Complete the journal here"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </form>
+      <section class="wrapper style1 align-center">
+        <div class="inner" id="conclusion"></div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wrapper style1 align-center">
+        <div class="inner">
+          <p>&copy; Res Novae 2024</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="html5up-story/assets/js/jquery.min.js"></script>
+    <script src="html5up-story/assets/js/jquery.scrollex.min.js"></script>
+    <script src="html5up-story/assets/js/jquery.scrolly.min.js"></script>
+    <script src="html5up-story/assets/js/browser.min.js"></script>
+    <script src="html5up-story/assets/js/breakpoints.min.js"></script>
+    <script src="html5up-story/assets/js/util.js"></script>
+    <script src="html5up-story/assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the container
+
+        // Get the button
+        var submitForm = document.getElementById("submit-form");
+
+        submitForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var formData = new FormData(event.target);
+          var choice = "";
+          for (const [key, value] of formData.entries()) {
+            if (key == "choice-button") {
+              choice = value;
+            }
+          }
+
+          if (choice === "choice-1" || choice === "choice-2") {
+            var container = document.getElementById("conclusion");
+            // Create h2 element
+            var conclusionTitle = document.createElement("h1");
+            conclusionTitle.textContent = "Conclusion";
+
+            // Create img element
+            var imgDiv = document.createElement("div");
+            var img = document.createElement("img");
+            if (choice === "choice-1") {
+              img.src = "forest/forest9.png";
+            } else if (choice === "choice-2") {
+              img.src = "forest/forest10.png";
+            }
+            img.alt = "alt";
+            imgDiv.classList.add("image");
+            imgDiv.classList.add("fit");
+            imgDiv.appendChild(img);
+
+            // Create the body element
+            var conclusionHeader = document.createElement("h2");
+            var conclusionBody = document.createElement("p");
+            if (choice === "choice-1") {
+              conclusionHeader.textContent = "Leave the Crystal Alone";
+              conclusionBody.innerHTML =
+                "Daisy chooses to preserve the forest's harmony over her desire to see her beloved Elise again. She envisions that Elise too would not be happy to be returned by such a sacrifice. She leaves the forest with newfound companionship and her heart full of hope.";
+            } else if (choice == "choice-2") {
+              conclusionHeader.textContent = "Wish on the Crystal";
+              conclusionBody.innerHTML =
+                "Daisy gets her wish granted as the crystal disappears and Elise appears in front of her. The forest begins to be affected with earthquakes and rumbling so she and Elise escape back to their village. Surprisingly, no one in her village is aware of the earthquake and commotion that had just happened. Curious, Daisy tries to return to the magical forest but can no longer find her way back as the hidden path which she had discovered had completely vanished without a trace.<br/><br/> She feels regret at her decision that destroyed the home of her new friends and hopes that she may one day get a chance to meet them again and make it up to them.";
+            }
+
+            var postStoryQuestionsUL = document.createElement("ul");
+            var questions = [
+              "How would you feel if your friend make a choice that could hurt you?",
+              "Is it okay to only think about ourselves?",
+              "Why is it important to consider how other people might feel about our actions or decisions?",
+            ];
+            for (var i = 0; i < questions.length; i++) {
+              var li = document.createElement("li");
+              li.textContent = questions[i];
+              postStoryQuestionsUL.appendChild(li);
+            }
+
+            // Append the elements to container
+            container.appendChild(conclusionTitle);
+            container.appendChild(imgDiv);
+            container.appendChild(conclusionHeader);
+            container.appendChild(conclusionBody);
+            container.appendChild(postStoryQuestionsUL);
+          }
+          document.getElementById("submit-journal").remove();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#submit-form").on("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          var dataString = $(this).serialize();
+
+          $.ajax({
+            type: "POST",
+            url: "https://formspree.io/f/xayrjgzz", // Replace with your FormSubmit endpoint
+            data: dataString,
+            cache: false,
+          });
+        });
+      });
+    </script>
+    <script>
+      // Function to start speech synthesis
+      function startSpeech(text) {
+        const speech = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(speech);
+      }
+
+      // Function to stop speech synthesis
+      function stopSpeech() {
+        speechSynthesis.cancel();
+      }
+
+      // Intersection Observer configuration
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0, // Change this threshold value according to your requirement
+      };
+
+      // Callback function to handle intersection changes
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start speech when the div enters the viewport
+            startSpeech(entry.target.innerText);
+          } else {
+            // Stop speech when the div leaves the viewport
+            stopSpeech();
+          }
+        });
+      }
+
+      // Create Intersection Observer instance
+      const observer = new IntersectionObserver(handleIntersection, options);
+
+      // Target the div
+      const targetDivs = document.querySelectorAll(
+        "#para1, #para2, #para3, #para4, #para5, #para6, #para7, #para8"
+      );
+
+      // Start observing the div
+      targetDivs.forEach((div) => {
+        observer.observe(div);
+      });
+    </script>
+    <script>
+      const speechButton = document.getElementById("speechButton");
+      const speechInput = document.getElementById("message");
+      let recognition = null;
+      let isListening = false;
+
+      function startSpeechRecognition() {
+        if (!("webkitSpeechRecognition" in window)) {
+          speechInput.value =
+            "Your browser does not support speech recognition.";
+          return;
+        }
+
+        recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = false;
+        recognition.lang = "en-US";
+
+        recognition.onstart = function () {
+          speechInput.value = "Listening...";
+          isListening = true;
+        };
+
+        recognition.onresult = function (event) {
+          speechInput.value = event.results[0][0].transcript;
+        };
+
+        recognition.onerror = function (event) {
+          speechInput.value = "Error occurred in recognition: " + event.error;
+        };
+
+        recognition.start();
+      }
+
+      speechButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (isListening) {
+          recognition.stop();
+          speechButton.textContent = "Start Speech Recognition";
+          isListening = false;
+        } else {
+          startSpeechRecognition();
+          speechButton.textContent = "Stop Speech Recognition";
+        }
+      });
+    </script>
+  </body>
+</html>
