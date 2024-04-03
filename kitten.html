@@ -280,12 +280,14 @@
             if (choice === "choice-1") {
               conclusionHeader.textContent = "Reveal Bubbles";
               conclusionBody.innerHTML =
-                "Lily asks Gwen to wait there and leaves to find Bubbles.<br/><br/>She brings Bubbles to Gwen whose eyes are filled with tears of joy.<br/><br/>Seeing Gwen, Bubbles jumps into Gwen's arms.<br/><br/>Bubbles may be leaving the village along with Gwen, but nothing is truly lost.<br/><br/>The memories she and Bubbles shared will always remain close to her heart.<br/><br/>";
+                "Lily asks Gwen to wait there and leaves to find Bubbles.<br/><br/>She brings Bubbles to Gwen whose eyes are filled with tears of joy.<br/><br/>Seeing Gwen, Bubbles jumps into Gwen's arms.<br/><br/>Bubbles may be leaving the village along with Gwen, but nothing is truly lost.<br/><br/>The memories she and Bubbles shared will always remain close to her heart.";
             } else if (choice == "choice-2") {
               conclusionHeader.textContent = "Keep Bubbles a secret";
               conclusionBody.innerHTML =
-                "As Lily and Bubbles both rest on the grass, Lily feels a tug on her heart as she thinks about how Gwen looked when she left.<br/><br/>She felt sad at having hidden the truth about Bubbles from her.<br/><br/>Would she ever be able to meet Gwen again and ask for her forgiveness for the choice she made?<br/><br/>Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.Lily and Bubbles both rest on the grass.<br/><br/>";
+                "As Lily and Bubbles both rest on the grass, Lily feels a tug on her heart as she thinks about how Gwen looked when she left.<br/><br/>She felt sad at having hidden the truth about Bubbles from her.<br/><br/>Would she ever be able to meet Gwen again and ask for her forgiveness for the choice she made?<br/><br/>Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.Lily and Bubbles both rest on the grass.";
             }
+
+            var hr = document.createElement("hr");
 
             var postStoryQuestionsUL = document.createElement("ul");
             var questions = [
@@ -304,6 +306,7 @@
             container.appendChild(imgDiv);
             container.appendChild(conclusionHeader);
             container.appendChild(conclusionBody);
+            container.appendChild(hr);
             container.appendChild(postStoryQuestionsUL);
           }
           document.getElementById("submit-journal").remove();

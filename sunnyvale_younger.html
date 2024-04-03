@@ -274,6 +274,8 @@
                 "Daisy could not resist the thought of having Elise back. She made her wish, and Elise appeared! But the forest started shaking and breaking. Daisy and Elise hurried back to the village, but no one knew what had happened in the forest.<br/><br/>Daisy tried to go back to the magical forest later, but the path was gone. She felt bad for what happened to her friends' home and hoped she could make it up to them one day.";
             }
 
+            var hr = document.createElement("hr");
+
             var postStoryQuestionsUL = document.createElement("ul");
             var questions = [
               "How would you feel if your friend made a choice that could hurt you?",
@@ -291,6 +293,7 @@
             container.appendChild(imgDiv);
             container.appendChild(conclusionHeader);
             container.appendChild(conclusionBody);
+            container.appendChild(hr);
             container.appendChild(postStoryQuestionsUL);
           }
           document.getElementById("submit-journal").remove();

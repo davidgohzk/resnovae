@@ -392,6 +392,9 @@
               "Why is it important to consider what other people might feel/react to our actions or decisions?Is it okay to only think about ourselves?",
               "Have you ever been in a situation when someone neglected your feelings? How did you feel and how did you react in the situation?",
             ];
+
+            var hr = document.createElement("hr");
+
             for (var i = 0; i < questions.length; i++) {
               var li = document.createElement("li");
               li.textContent = questions[i];
@@ -403,6 +406,7 @@
             container.appendChild(imgDiv);
             container.appendChild(conclusionHeader);
             container.appendChild(conclusionBody);
+            container.appendChild(hr);
             container.appendChild(postStoryQuestionsUL);
           }
           document.getElementById("submit-journal").remove();
