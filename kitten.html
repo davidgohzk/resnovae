@@ -42,7 +42,7 @@
             the woods for a long time.
 
             <br /><br />The kitten is very scared of her, but Lily immediately
-            takes a liking to it.
+            starts to like it.
           </p>
         </div>
         <div class="image">
@@ -56,7 +56,7 @@
       >
         <div class="content">
           <p id="para3">
-            She feeds the kitten some milk and grows to befriend it.
+            She feeds the kitten some milk and makes friends with it.
           </p>
         </div>
         <div class="image">
@@ -70,8 +70,9 @@
       >
         <div class="content">
           <p id="para4">
-            Every day, she returns to that spot near her village to play with
-            the kitten and take care of it.<br /><br />
+            Every day, she returns to the spot near her village to play with the
+            kitten and take care of it.
+            <br /><br />
             She grows to love the kitten and forms a deep bond with it.
           </p>
         </div>
@@ -85,8 +86,8 @@
       >
         <div class="content">
           <p id="para5">
-            One day when Lily is on her way home after school, she sees a little
-            girl sitting forlornly at a pond nearby.
+            One day when Lily is on her way home after school, she see a little
+            girl looking sad and sitting alone at a pond nearby.
           </p>
         </div>
         <div class="image">
@@ -98,8 +99,8 @@
       >
         <div class="content">
           <p id="para6">
-            She recognises the girl as Gwen and, approaching her, asks what’s
-            wrong.
+            Lily slowly approaches the girl and recognises her to be her friend,
+            Gwen!
           </p>
         </div>
         <div class="image">
@@ -112,9 +113,11 @@
         <div class="content">
           <p id="para7">
             Gwen says that she recently lost her kitten, Bubbles, and she misses
-            her dearly. She thought that she would have a bit more time to
-            search for Bubbles but she will be moving away to the big city the
-            very next day. <br /><br />
+            her dearly.
+            <br /><br />
+            She thought that she would have a bit more time to search for
+            Bubbles but she will be moving away to the big city the very next
+            day. <br /><br />
             Today would be her last day to find Bubbles and till now she has not
             seen a single sign of her best friend, Bubbles.
           </p>
@@ -129,11 +132,11 @@
         <div class="content">
           <p id="para8">
             Lily immediately recognises that Bubbles is the kitten she had
-            found. What should Lily do? <br /><br />
-            Should she reveal that she knows Bubbles and risk never seeing
-            Bubbles ever again even though Bubbles will be reunited with her
-            owner? <br /><br />Or should she pretend to be ignorant and keep
-            bubbles a secret?
+            found. What should Lily do?
+            <br /><br />
+            Should Lily reveal to Gwen that she knows Bubbles?
+            <br /><br />
+            Or should Lily pretend to not know and keep Bubbles a secret?
           </p>
         </div>
         <div class="image">
@@ -145,13 +148,12 @@
       <form id="submit-form" method="post">
         <section class="wrapper style1 align-center">
           <div class="inner">
-            <h2>If you were Lily, what would you do?</h2>
+            <h2>What would you do if you were Lily?</h2>
             <div class="items style1 medium onscroll-fade-in">
               <section>
                 <p>
                   I will reveals that I knows Bubbles and risk never seeing
-                  Bubbles again even though Bubbles will not be reunited with me
-                  again.
+                  Bubbles again.
                 </p>
 
                 <input
@@ -164,7 +166,7 @@
                 <label for="choice-1">Select Choice</label>
               </section>
               <section>
-                <p>I pretend to be ignorant and keep Bubbles a secret.</p>
+                <p>I will keep Bubbles a secret.</p>
                 <input
                   type="radio"
                   id="choice-2"
@@ -190,7 +192,7 @@
         <!-- Seven -->
         <section class="wrapper style1 align-center">
           <div class="inner medium">
-            <h2>Why did you make this choice?</h2>
+            <h2>What made you choose that choice?</h2>
             <div class="fields">
               <div class="field">
                 <textarea
@@ -220,7 +222,7 @@
       </section>
 
       <!-- Footer -->
-      <footer class="wrapper style1 align-center">
+      <footer class="wrapper style1 content-align-left">
         <div class="inner">
           <p>&copy; Res Novae 2024</p>
         </div>
@@ -274,15 +276,15 @@
 
             // Create the body element
             var conclusionHeader = document.createElement("h2");
-            var conclusionBody = document.createElement("p");
+            var conclusionBody = document.createElement("div");
             if (choice === "choice-1") {
               conclusionHeader.textContent = "Reveal Bubbles";
               conclusionBody.innerHTML =
-                "Lily asks Gwen to wait there and leaves to find Bubbles.<br>She brings Bubbles to Gwen whose eyes well up with tears of joy.<br>Seeing her owner, Bubbles’ usually reserved demeanor shatters and she jumps into Gwen’s arms.<br>Seeing the two companions reunited, Lily feels a small smile come to her face and senses that things will be alright.<br>Bubbles may be leaving the village along with Gwen, but nothing is truly lost.<br>The memories she and Bubbles shared will always remain close to her heart.<br>All precious memories will converge and flow down the river of life towards eternity.";
+                "Lily asks Gwen to wait there and leaves to find Bubbles.<br/><br/>She brings Bubbles to Gwen whose eyes are filled with tears of joy.<br/><br/>Seeing Gwen, Bubbles jumps into Gwen's arms.<br/><br/>Bubbles may be leaving the village along with Gwen, but nothing is truly lost.<br/><br/>The memories she and Bubbles shared will always remain close to her heart.<br/><br/>";
             } else if (choice == "choice-2") {
               conclusionHeader.textContent = "Keep Bubbles a secret";
               conclusionBody.innerHTML =
-                "Lily looks away slightly and says softly that she has not seen Bubbles but would be sure to keep a lookout for her.<br>Gwen looks at her with puffy eyes and gives a small smile - thanking Lily for listening to her.<br>Lily spends some more time giving Gwen company before they return home.<br>The next day Gwen and her family leave the village...<br>Lily finds Bubbles again and decides to adopt her.<br>As they both rest on the grass watching the sunset in the distance, Lily feels a tug on her heart as she thinks about Gwen looking forlorn yesterday.<br>She did not know Gwen so well but she still felt sad at having hidden the truth about Bubbles from her.<br>Would she ever be able to meet Gwen again and beg for her forgiveness for the self-serving choice she made?<br>Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.";
+                "As Lily and Bubbles both rest on the grass, Lily feels a tug on her heart as she thinks about how Gwen looked when she left.<br/><br/>She felt sad at having hidden the truth about Bubbles from her.<br/><br/>Would she ever be able to meet Gwen again and ask for her forgiveness for the choice she made?<br/><br/>Only time will tell but Lily had a feeling that the warmth of her newfound friend beside her would give her the courage when that time does come.Lily and Bubbles both rest on the grass.<br/><br/>";
             }
 
             var postStoryQuestionsUL = document.createElement("ul");

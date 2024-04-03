@@ -21,13 +21,9 @@
       >
         <div class="content">
           <h1>The Enchanted Treasure of Sunnyvale Forest</h1>
-          <p class="major" id="para1">
-            In a lovely town, Daisy is sad by the passing of her beloved dog,
-            Elise.
-          </p>
         </div>
         <div class="image">
-          <img src="forest/forest1.png" alt="" />
+          <img src="sunnyvale_younger/landing.png" alt="" />
         </div>
       </section>
 
@@ -38,13 +34,13 @@
       >
         <div class="content">
           <p id="para2">
-            When Daisy went to explore a hidden path, she discovers the
-            enchanted Sunnyvale Forest, where she meets and journeys together
-            with animal friends!
+            Once upon a time, in a little village, there was a girl named Daisy.
+            She was very curious and loved her dog, Elise, a lot. But one day,
+            Elise went away, and Daisy felt very sad.
           </p>
         </div>
         <div class="image">
-          <img src="forest/forest8.png" alt="" />
+          <img src="sunnyvale_younger/1.png" alt="" />
         </div>
       </section>
 
@@ -54,12 +50,14 @@
       >
         <div class="content">
           <p id="para3">
-            Daisy grows closer to her animal friends over the many days she
-            spends with them!
+            One sunny day, Daisy decided to go for a walk outside her village.
+            She found a secret path that led to a magical forest called
+            Sunnyvale Forest. In the forest, there were talking animals and
+            beautiful flowers.
           </p>
         </div>
         <div class="image">
-          <img src="forest/forest5.png" alt="" />
+          <img src="sunnyvale_younger/2.png" alt="" />
         </div>
       </section>
 
@@ -69,21 +67,70 @@
       >
         <div class="content">
           <p id="para4">
-            One day, she discovers that there lies a magical crystal at the
-            heart of the forest that will grant its owner any one wish that they
-            desire.
-            <br />
-            <br />
-            Determined to bring Elise back, Daisy embarks on a quest for the
-            magical crystal but faces a moral choice.
-            <br />
-            <br />
-            If Daisy were to wish on the crystal, diseases would affect the
-            entire forest and rob her new friends of their home.
+            Daisy became friends with the animals and learned important things
+            like being kind to nature and others. She loved visiting the magical
+            forest because it made her happy.
           </p>
         </div>
         <div class="image">
-          <img src="forest/forest6.png" alt="" />
+          <img src="sunnyvale_younger/3.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para5">
+            One day, Daisy heard about a special crystal hidden deep in the
+            forest. It was said that the crystal could grant any wish. Daisy
+            wanted to wish for Elise to come back.
+          </p>
+        </div>
+        <div class="image">
+          <img src="sunnyvale_younger/4.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para6">
+            As Daisy went on her adventure to find the crystal, she met
+            challenges but did not give up. Finally, she found the crystal.
+          </p>
+        </div>
+        <div class="image">
+          <img src="sunnyvale_younger/5.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para7">
+            But just as she was about to make her wish, a wise owl warned her
+            that using the crystal would hurt the forest.
+          </p>
+        </div>
+        <div class="image">
+          <img src="sunnyvale_younger/6.png" alt="" />
+        </div>
+      </section>
+
+      <section
+        class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+      >
+        <div class="content">
+          <p id="para8">
+            Daisy had to decide: Should she make her wish and bring Elise back,
+            or leave the crystal and protect her new friends' home?
+          </p>
+        </div>
+        <div class="image">
+          <img src="sunnyvale_younger/7.png" alt="" />
         </div>
       </section>
 
@@ -91,10 +138,10 @@
       <form id="submit-form" method="post">
         <section class="wrapper style1 align-center">
           <div class="inner">
-            <h2>If you were Daisy, what would you do?</h2>
+            <h2>What should Daisy do?</h2>
             <div class="items style1 medium onscroll-fade-in">
               <section>
-                <p>I will leave the Crystal Alone</p>
+                <p>Leave Sunnyvale Forest</p>
 
                 <input
                   type="radio"
@@ -106,7 +153,7 @@
                 <label for="choice-1">Select Choice</label>
               </section>
               <section>
-                <p>I wish on the Crystal</p>
+                <p>Wish on the Crystal & Save Elise</p>
                 <input
                   type="radio"
                   id="choice-2"
@@ -205,9 +252,9 @@
             var imgDiv = document.createElement("div");
             var img = document.createElement("img");
             if (choice === "choice-1") {
-              img.src = "forest/forest9.png";
+              img.src = "sunnyvale_younger/9.png";
             } else if (choice === "choice-2") {
-              img.src = "forest/forest10.png";
+              img.src = "sunnyvale_younger/10.png";
             }
             img.alt = "alt";
             imgDiv.classList.add("image");
@@ -218,19 +265,19 @@
             var conclusionHeader = document.createElement("h2");
             var conclusionBody = document.createElement("p");
             if (choice === "choice-1") {
-              conclusionHeader.textContent = "Leave the Crystal Alone";
+              conclusionHeader.textContent = "Leave Sunnyvale Forest";
               conclusionBody.innerHTML =
-                "Daisy chooses to preserve the forest's harmony over her desire to see her beloved Elise again. She envisions that Elise too would not be happy to be returned by such a sacrifice. She leaves the forest with newfound companionship and her heart full of hope.";
+                "Daisy decided not to make her wish. She did not want to hurt the forest or her new friends. She felt sad but knew it was the right thing to do. She left the forest feeling hopeful and happy with her new forest friends.";
             } else if (choice == "choice-2") {
-              conclusionHeader.textContent = "Wish on the Crystal";
+              conclusionHeader.textContent = "Wish on the Crystal & Save Elise";
               conclusionBody.innerHTML =
-                "Daisy gets her wish granted as the crystal disappears and Elise appears in front of her. The forest begins to be affected with earthquakes and rumbling so she and Elise escape back to their village. Surprisingly, no one in her village is aware of the earthquake and commotion that had just happened. Curious, Daisy tries to return to the magical forest but can no longer find her way back as the hidden path which she had discovered had completely vanished without a trace.<br/><br/> She feels regret at her decision that destroyed the home of her new friends and hopes that she may one day get a chance to meet them again and make it up to them.";
+                "Daisy could not resist the thought of having Elise back. She made her wish, and Elise appeared! But the forest started shaking and breaking. Daisy and Elise hurried back to the village, but no one knew what had happened in the forest.<br/><br/>Daisy tried to go back to the magical forest later, but the path was gone. She felt bad for what happened to her friends' home and hoped she could make it up to them one day.";
             }
 
             var postStoryQuestionsUL = document.createElement("ul");
             var questions = [
-              "How would you feel if your friend make a choice that could hurt you?",
-              "Is it okay to only think about ourselves?",
+              "How would you feel if your friend made a choice that could hurt you?",
+              "Would it be okay to only think about ourselves?",
               "Why is it important to consider how other people might feel about our actions or decisions?",
             ];
             for (var i = 0; i < questions.length; i++) {
@@ -303,7 +350,7 @@
 
       // Target the div
       const targetDivs = document.querySelectorAll(
-        "#para1, #para2, #para3, #para4, #para5, #para6, #para7, #para8"
+        "#para1, #para2, #para3, #para4, #para5, #para6, #para7, #para8, #para9, #para10"
       );
 
       // Start observing the div
