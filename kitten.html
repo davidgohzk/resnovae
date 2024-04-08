@@ -295,7 +295,7 @@
               "Would you lie for something good? Why or why not?",
               "How would you feel if you found out you were lied to?",
             ];
-            for (var i = 0; i < questions.length; i++) {
+            for (var i = 0; i  questions.length; i++) {
               var li = document.createElement("li");
               li.textContent = questions[i];
               postStoryQuestionsUL.appendChild(li);
@@ -322,7 +322,7 @@
 
           $.ajax({
             type: "POST",
-            url: "https://formspree.io/f/xnqeojdy", // Replace with your FormSubmit endpoint
+            url: "https://formspree.io/f/xkndpjgo", // Replace with your FormSubmit endpoint
             data: dataString,
             cache: false,
           });
@@ -350,7 +350,7 @@
 
       // Callback function to handle intersection changes
       function handleIntersection(entries, observer) {
-        entries.forEach((entry) => {
+        entries.forEach((entry) = {
           if (entry.isIntersecting) {
             // Start speech when the div enters the viewport
             startSpeech(entry.target.innerText);
